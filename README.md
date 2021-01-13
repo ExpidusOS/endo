@@ -1,9 +1,9 @@
-[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.xfce.org/xfce/exo/COPYING)
+[![License](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://gitlab.expidus.org/expidus/exo/COPYING)
 
 # exo
 
 
-exo is an extension library used in the Xfce desktop. It has some helper
+exo is an extension library used in the Expidus desktop. It has some helper
 applications that are used throughout the entire desktop, to manage preferred 
 applications and edit .desktop files.
 
@@ -11,21 +11,21 @@ applications and edit .desktop files.
 
 ### Homepage
 
-[exo documentation](https://docs.xfce.org/xfce/exo/start)
+[exo documentation](https://docs.expidus.org/expidus/exo/start)
 
 ### Changelog
 
-See [NEWS](https://gitlab.xfce.org/xfce/exo/-/blob/master/NEWS) for details on changes and fixes made in the current release.
+See [NEWS](https://gitlab.expidus.org/expidus/exo/-/blob/master/NEWS) for details on changes and fixes made in the current release.
 
 ### Source Code Repository
 
-[exo source code](https://gitlab.xfce.org/xfce/exo)
+[exo source code](https://gitlab.expidus.org/expidus/exo)
 
 ### Download A Release Tarball
 
-[exo archive](https://archive.xfce.org/src/xfce/exo)
+[exo archive](https://archive.expidus.org/src/expidus/exo)
     or
-[exo tags](https://gitlab.xfce.org/xfce/exo/-/tags)
+[exo tags](https://gitlab.expidus.org/expidus/exo/-/tags)
 
 ### Installation
 
@@ -46,5 +46,5 @@ From release tarball:
 
 ### Reporting Bugs
 
-Visit the [reporting bugs](https://docs.xfce.org/xfce/exo/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
+Visit the [reporting bugs](https://docs.expidus.org/expidus/exo/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
 

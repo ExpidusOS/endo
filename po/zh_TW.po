@@ -14,7 +14,7 @@ msgstr ""
 "POT-Creation-Date: 2020-10-24 12:45+0200\n"
 "PO-Revision-Date: 2020-10-25 12:28+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/exo/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/expidus/exo/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -443,7 +443,7 @@ msgstr "選項："
 #. TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to
 #. avoid mnemonic conflicts
 #. *              and sync your translations with the translations in Thunar
-#. and xfce4-panel.
+#. and expidus1-panel.
 #: ../exo-desktop-item-edit/exo-die-editor.c:421
 msgid "Use _startup notification"
 msgstr "使用起始通知(_S)"
@@ -458,7 +458,7 @@ msgstr "選取此選項以啟用當指令從檔案管理員或是選單執行時
 #. TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to
 #. avoid mnemonic conflicts
 #. *              and sync your translations with the translations in Thunar
-#. and xfce4-panel.
+#. and expidus1-panel.
 #: ../exo-desktop-item-edit/exo-die-editor.c:435
 msgid "Run in _terminal"
 msgstr "在終端機中執行(_T)"
@@ -559,9 +559,9 @@ msgid ""
 "Copyright (c) %s\n"
 "        os-cillation e.K. All rights reserved.\n"
 "\n"
-"Written by Benedikt Meurer <benny@xfce.org>.\n"
+"Written by Benedikt Meurer <benny@expidus.org>.\n"
 "\n"
-msgstr "版權所有 (c) %s\n        os-cillation e.K. 保留所有權利。\n\n由 Benedikt Meurer 編寫 <benny@xfce.org>。\n\n"
+msgstr "版權所有 (c) %s\n        os-cillation e.K. 保留所有權利。\n\n由 Benedikt Meurer 編寫 <benny@expidus.org>。\n\n"
 
 #: ../exo-desktop-item-edit/main.c:203 ../exo-open/main.c:621
 #, c-format
@@ -675,7 +675,7 @@ msgstr "--launch 指令支援下列「類型」："
 
 #. Note to Translators: Do not translate the TYPEs (WebBrowser, MailReader,
 #. TerminalEmulator),
-#. * since the xfce4-mime-helper utility will not accept localized TYPEs.
+#. * since the expidus1-mime-helper utility will not accept localized TYPEs.
 #: ../exo-open/main.c:128
 msgid ""
 "  WebBrowser       - The preferred Web Browser.\n"

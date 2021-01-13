@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005-2006 Benedikt Meurer <benny@xfce.org>.
+ * Copyright (c) 2005-2006 Benedikt Meurer <benny@expidus.org>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -103,7 +103,7 @@ find_fallback_application_from_rc_file (const gchar *category)
   gchar    *path = NULL;
   GKeyFile *keyfile;
 
-  cfg = g_strconcat(g_get_user_config_dir(), "/xfce4/helpers.rc", NULL);
+  cfg = g_strconcat(g_get_user_config_dir(), "/expidus1/helpers.rc", NULL);
 
   if (g_file_get_contents (cfg, &contents, NULL, NULL))
   {
@@ -152,7 +152,7 @@ find_fallback_application_from_xdg_mime (const gchar *category)
   }
   else if (g_strcmp0(category, "TerminalEmulator") == 0)
   {
-    info = g_desktop_app_info_new("xfce4-terminal.desktop");
+    info = g_desktop_app_info_new("expidus1-terminal.desktop");
   }
   else
   {
@@ -260,7 +260,7 @@ exo_execute_preferred_application_on_screen (const gchar *category,
 
   /* generate the argument vector */
 
-  path = g_find_program_in_path ("xfce4-mime-helper");
+  path = g_find_program_in_path ("expidus1-mime-helper");
   if (G_LIKELY(path != NULL))
   {
     argv[argc++] = path;

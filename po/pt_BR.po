@@ -22,7 +22,7 @@ msgstr ""
 "POT-Creation-Date: 2020-10-24 12:45+0200\n"
 "PO-Revision-Date: 2020-11-10 23:40+0000\n"
 "Last-Translator: Michael Martins <michaelfm21@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/exo/language/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/expidus/exo/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -451,7 +451,7 @@ msgstr "Opções:"
 #. TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to
 #. avoid mnemonic conflicts
 #. *              and sync your translations with the translations in Thunar
-#. and xfce4-panel.
+#. and expidus1-panel.
 #: ../exo-desktop-item-edit/exo-die-editor.c:421
 msgid "Use _startup notification"
 msgstr "Usar _notificação de inicialização"
@@ -466,7 +466,7 @@ msgstr "Selecione esta opção para habilitar a notificação de inicialização
 #. TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to
 #. avoid mnemonic conflicts
 #. *              and sync your translations with the translations in Thunar
-#. and xfce4-panel.
+#. and expidus1-panel.
 #: ../exo-desktop-item-edit/exo-die-editor.c:435
 msgid "Run in _terminal"
 msgstr "Executar no _terminal"
@@ -567,9 +567,9 @@ msgid ""
 "Copyright (c) %s\n"
 "        os-cillation e.K. All rights reserved.\n"
 "\n"
-"Written by Benedikt Meurer <benny@xfce.org>.\n"
+"Written by Benedikt Meurer <benny@expidus.org>.\n"
 "\n"
-msgstr "Copyright (c) %s\n        os-cillation e.K. Todos os direitos reservados.\n\nEscrito por Benedikt Meurer <benny@xfce.org>.\n\n"
+msgstr "Copyright (c) %s\n        os-cillation e.K. Todos os direitos reservados.\n\nEscrito por Benedikt Meurer <benny@expidus.org>.\n\n"
 
 #: ../exo-desktop-item-edit/main.c:203 ../exo-open/main.c:621
 #, c-format
@@ -683,7 +683,7 @@ msgstr "Os seguintes TIPOs têm suporte para o comando --launch:"
 
 #. Note to Translators: Do not translate the TYPEs (WebBrowser, MailReader,
 #. TerminalEmulator),
-#. * since the xfce4-mime-helper utility will not accept localized TYPEs.
+#. * since the expidus1-mime-helper utility will not accept localized TYPEs.
 #: ../exo-open/main.c:128
 msgid ""
 "  WebBrowser       - The preferred Web Browser.\n"

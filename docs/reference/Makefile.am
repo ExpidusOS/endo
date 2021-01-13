@@ -47,7 +47,7 @@ GTKDOC_CFLAGS =	 							\
 	-I$(top_srcdir) 						\
 	-I$(top_builddir) 						\
 	$(GTK_CFLAGS)                                                  \
-	$(LIBXFCE4UTIL_CFLAGS)
+	$(LIBEXPIDUS1UTIL_CFLAGS)
 
 GTKDOC_LIBS =  								\
 	$(top_builddir)/exo/libexo-$(LIBEXO_VERSION_API).la	\

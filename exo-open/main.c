@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005-2006 Benedikt Meurer <benny@xfce.org>.
+ * Copyright (c) 2005-2006 Benedikt Meurer <benny@expidus.org>.
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
@@ -57,9 +57,9 @@
 /**
  * For testing this code, the following commands should work:
  *
- * exo-open --launch WebBrowser https://xfce.org (bug #5461).
- * exo-open --launch WebBrowser https://xfce.org gitlab.xfce.org 'http://www.google.com/search?q=what is a space' 'https://wiki.xfce.org'
- * exo-open https://xfce.org
+ * exo-open --launch WebBrowser https://expidus.org (bug #5461).
+ * exo-open --launch WebBrowser https://expidus.org gitlab.expidus.org 'http://www.google.com/search?q=what is a space' 'https://wiki.expidus.org'
+ * exo-open https://expidus.org
  * exo-open --launch TerminalEmulator ./script.sh 'something with a space' 'nospace' (bug #5132).
  * exo-open --launch TerminalEmulator ssh -l username some.host.com
  *
@@ -123,7 +123,7 @@ usage (void)
   g_print ("\n");
 
   /* Note to Translators: Do not translate the TYPEs (WebBrowser, MailReader, TerminalEmulator),
-   * since the xfce4-mime-helper utility will not accept localized TYPEs.
+   * since the expidus1-mime-helper utility will not accept localized TYPEs.
    */
   g_print ("%s\n", _("  WebBrowser       - The preferred Web Browser.\n"
                      "  MailReader       - The preferred Mail Reader.\n"
@@ -468,7 +468,7 @@ main (gint argc, gchar **argv)
 
 #ifdef GETTEXT_PACKAGE
   /* setup i18n support */
-  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+  expidus_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 #endif
 
   /* steal the startup id, before gtk tries to grab it */
@@ -616,7 +616,7 @@ main (gint argc, gchar **argv)
       g_print ("%s %s\n\n", g_get_prgname (), PACKAGE_VERSION);
       g_print (_("Copyright (c) %s\n"
                  "        os-cillation e.K. All rights reserved.\n\n"
-                 "Written by Benedikt Meurer <benny@xfce.org>.\n\n"),
+                 "Written by Benedikt Meurer <benny@expidus.org>.\n\n"),
                "2005-2007");
       g_print (_("%s comes with ABSOLUTELY NO WARRANTY,\n"
                  "You may redistribute copies of %s under the terms of\n"

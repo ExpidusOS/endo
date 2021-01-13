@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2008       Jannis Pohlmann <jannis@xfce.org>
+ * Copyright (c) 2008       Jannis Pohlmann <jannis@expidus.org>
  * Copyright (c) 2004-2006  os-cillation e.K.
  * Copyright (c) 2002,2004  Anders Carlsson <andersca@gnu.org>
  *
- * Written by Benedikt Meurer <benny@xfce.org>.
+ * Written by Benedikt Meurer <benny@expidus.org>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -4153,7 +4153,7 @@ exo_icon_view_add_move_binding (GtkBindingSet  *binding_set,
   gtk_binding_entry_add_signal (binding_set, keyval, modmask, "move-cursor", 2, G_TYPE_ENUM, step, G_TYPE_INT, count);
 
   /* skip shift+n and shift+p because this blocks type-ahead search.
-   * see https://bugzilla.xfce.org/show_bug.cgi?id=4633
+   * see https://bugzilla.expidus.org/show_bug.cgi?id=4633
    */
   if (G_LIKELY (keyval != GDK_KEY_p && keyval != GDK_KEY_n))
     gtk_binding_entry_add_signal (binding_set, keyval, GDK_SHIFT_MASK, "move-cursor", 2, G_TYPE_ENUM, step, G_TYPE_INT, count);
@@ -4609,7 +4609,7 @@ exo_icon_view_move_cursor_left_right (ExoIconView *icon_view,
             {
               /* determine the next/prev list item depending on step,
                * support wrapping around on the edges, as requested
-               * in https://bugzilla.xfce.org/show_bug.cgi?id=1623.
+               * in https://bugzilla.expidus.org/show_bug.cgi?id=1623.
                */
               list = (step > 0) ? list->next : list->prev;
             }
@@ -8336,7 +8336,7 @@ exo_icon_view_search_ensure_directory (ExoIconView *icon_view)
   gtk_window_set_screen (GTK_WINDOW (icon_view->priv->search_window), gtk_widget_get_screen (GTK_WIDGET (icon_view)));
 
   /* attach the popup window to the toplevel parent (only needed on wayland).
-   * see https://bugzilla.xfce.org/show_bug.cgi?id=16768
+   * see https://bugzilla.expidus.org/show_bug.cgi?id=16768
    */
   gtk_window_set_transient_for (GTK_WINDOW (icon_view->priv->search_window), GTK_WINDOW (toplevel));
 

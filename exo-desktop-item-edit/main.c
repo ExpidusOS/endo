@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>.
+ * Copyright (c) 2006 Benedikt Meurer <benny@expidus.org>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@
 #endif
 
 #include <gio/gio.h>
-#include <libxfce4ui/libxfce4ui.h>
+#include <libexpidus1ui/libexpidus1ui.h>
 
 #include <exo/exo.h>
 #include <exo-desktop-item-edit/exo-die-editor.h>
@@ -115,7 +115,7 @@ exo_die_response_cb (GtkDialog *dialog,
                      gpointer   user_data)
 {
   if (response_id == GTK_RESPONSE_HELP)
-    xfce_dialog_show_help (GTK_WINDOW (dialog), "exo", "desktop-item-edit", NULL);
+    expidus_dialog_show_help (GTK_WINDOW (dialog), "exo", "desktop-item-edit", NULL);
 }
 
 
@@ -156,7 +156,7 @@ main (int argc, char **argv)
   gint             ox, oy, ow, oh;
 
   /* setup translation domain */
-  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+  expidus_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
 #ifdef G_ENABLE_DEBUG
   /* Do NOT remove this line for now, If something doesn't work,
@@ -192,7 +192,7 @@ main (int argc, char **argv)
       g_print ("%s %s\n\n", g_get_prgname (), PACKAGE_VERSION);
       g_print (_("Copyright (c) %s\n"
                  "        os-cillation e.K. All rights reserved.\n\n"
-                 "Written by Benedikt Meurer <benny@xfce.org>.\n\n"),
+                 "Written by Benedikt Meurer <benny@expidus.org>.\n\n"),
                "2005-2007");
       g_print (_("%s comes with ABSOLUTELY NO WARRANTY,\n"
                  "You may redistribute copies of %s under the terms of\n"
@@ -318,31 +318,31 @@ main (int argc, char **argv)
   g_type_class_unref (enum_klass);
 
   /* allocate the dialog */
-  dialog = xfce_titled_dialog_new ();
+  dialog = expidus_titled_dialog_new ();
   gtk_window_set_title (GTK_WINDOW (dialog), opt_create_new ? _(CREATE_TITLES[mode]) : _(EDIT_TITLES[mode]));
   gtk_window_set_default_size (GTK_WINDOW (dialog), 350, 375);
   gtk_window_set_icon_name (GTK_WINDOW (dialog), ICON_NAMES[mode]);
   g_signal_connect (G_OBJECT (dialog), "response",
                     G_CALLBACK (exo_die_response_cb), dialog);
 
-  xfce_titled_dialog_create_action_area (XFCE_TITLED_DIALOG (dialog));
+  expidus_titled_dialog_create_action_area (EXPIDUS_TITLED_DIALOG (dialog));
 
   /* add the "Help" button */
   button = gtk_button_new_with_mnemonic (_("_Help"));
   image = gtk_image_new_from_icon_name ("help-browser", GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
-  xfce_titled_dialog_add_action_widget (XFCE_TITLED_DIALOG (dialog), button, GTK_RESPONSE_HELP);
+  expidus_titled_dialog_add_action_widget (EXPIDUS_TITLED_DIALOG (dialog), button, GTK_RESPONSE_HELP);
 
   /* add the "Cancel" button */
   button = gtk_button_new_with_mnemonic (_("_Cancel"));
-  xfce_titled_dialog_add_action_widget (XFCE_TITLED_DIALOG (dialog), button, GTK_RESPONSE_CANCEL);
+  expidus_titled_dialog_add_action_widget (EXPIDUS_TITLED_DIALOG (dialog), button, GTK_RESPONSE_CANCEL);
 
   /* add the "Create"/"Save" button (as default) */
   button = gtk_button_new_with_mnemonic (opt_create_new ? _("C_reate") : _("_Save"));
   image = gtk_image_new_from_icon_name (opt_create_new ? ("document-new") : ("document-save"), GTK_ICON_SIZE_BUTTON);
   gtk_button_set_image (GTK_BUTTON (button), image);
-  xfce_titled_dialog_add_action_widget (XFCE_TITLED_DIALOG (dialog), button, GTK_RESPONSE_ACCEPT);
-  xfce_titled_dialog_set_default_response (XFCE_TITLED_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
+  expidus_titled_dialog_add_action_widget (EXPIDUS_TITLED_DIALOG (dialog), button, GTK_RESPONSE_ACCEPT);
+  expidus_titled_dialog_set_default_response (EXPIDUS_TITLED_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
   gtk_widget_set_can_default (button, TRUE);
   gtk_widget_grab_default (button);
   gtk_widget_show (button);
@@ -577,7 +577,7 @@ main (int argc, char **argv)
 
               /* check if the file is in one of the applications directories
                * and get the relative path */
-              dirs = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, mode_dir);
+              dirs = expidus_resource_lookup_all (EXPIDUS_RESOURCE_DATA, mode_dir);
               base_name = NULL;
               for (base_name = NULL, i = 0; !base_name && dirs[i] != NULL; i++)
                 {
@@ -593,7 +593,7 @@ main (int argc, char **argv)
                 {
                   /* get the new file location */
                   relpath = g_build_filename (mode_dir, base_name, NULL);
-                  path = xfce_resource_save_location (XFCE_RESOURCE_DATA, relpath, TRUE);
+                  path = expidus_resource_save_location (EXPIDUS_RESOURCE_DATA, relpath, TRUE);
                   g_free (relpath);
 
                   if (G_LIKELY (path != NULL))

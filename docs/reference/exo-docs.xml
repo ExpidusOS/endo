@@ -31,7 +31,7 @@
       <year>2017</year>
       <year>2018</year>
       <year>2019</year>
-      <holder>Xfce Development Team</holder>
+      <holder>Expidus Development Team</holder>
     </copyright>
 
     <legalnotice id="legalnotice">
@@ -50,7 +50,7 @@
         <firstname>Benedikt</firstname>
         <surname>Meurer</surname>
         <affiliation>
-          <address><email>benny@xfce.org</email></address>
+          <address><email>benny@expidus.org</email></address>
           <orgname>os-cillation</orgname>
           <orgdiv>System development</orgdiv>
           <jobtitle>Software developer</jobtitle>
@@ -60,14 +60,14 @@
         <firstname>Jannis</firstname>
         <surname>Pohlmann</surname>
         <affiliation>
-          <address><email>jannis@xfce.org</email></address>
+          <address><email>jannis@expidus.org</email></address>
         </affiliation>
       </author>
       <author>
         <firstname>Sean</firstname>
         <surname>Davis</surname>
         <affiliation>
-          <address><email>bluesabre@xfce.org</email></address>
+          <address><email>bluesabre@expidus.org</email></address>
         </affiliation>
       </author>
     </authorgroup>
@@ -77,11 +77,11 @@
     <title>Overview</title>
     <para>
       <ulink type="http" url="http://libexo.os-cillation.com/">libexo</ulink> is an extension
-      library for <ulink url="https://xfce.org/" type="http">Xfce</ulink>,
+      library for <ulink url="https://expidus.org/" type="http">Expidus</ulink>,
       developed by <ulink url="http://www.os-cillation.com/" type="http">os-cillation</ulink>.
-      While Xfce comes with quite a few libraries that are targeted at desktop development,
+      While Expidus comes with quite a few libraries that are targeted at desktop development,
       libexo is targeted at application developement - in particular, developing applications for
-      the Xfce Desktop Environment.
+      the Expidus Desktop Environment.
     </para>
 
     <para>
@@ -160,10 +160,10 @@
         </varlistentry>
 
         <varlistentry>
-          <term>libxfce4util</term>
+          <term>libexpidus1util</term>
           <listitem>
             <para>
-              The Xfce utility library provides various helper functions and classes for
+              The Expidus utility library provides various helper functions and classes for
               C programmers, that aren't directly related to GUI tasks.
             </para>
           </listitem>

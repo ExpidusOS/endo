@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>.
+ * Copyright (c) 2006 Benedikt Meurer <benny@expidus.org>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -416,7 +416,7 @@ exo_die_editor_init (ExoDieEditor *editor)
   gtk_grid_attach (GTK_GRID (editor), label, 0, row, 1, 1);
 
   /* TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to avoid mnemonic conflicts
-   *              and sync your translations with the translations in Thunar and xfce4-panel.
+   *              and sync your translations with the translations in Thunar and expidus1-panel.
    */
   button = gtk_check_button_new_with_mnemonic (_("Use _startup notification"));
   gtk_widget_set_tooltip_text (button, _("Select this option to enable startup notification when the command "
@@ -430,7 +430,7 @@ exo_die_editor_init (ExoDieEditor *editor)
   row += 1;
 
   /* TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to avoid mnemonic conflicts
-   *              and sync your translations with the translations in Thunar and xfce4-panel.
+   *              and sync your translations with the translations in Thunar and expidus1-panel.
    */
   button = gtk_check_button_new_with_mnemonic (_("Run in _terminal"));
   gtk_widget_set_tooltip_text (button, _("Select this option to run the command in a terminal window."));

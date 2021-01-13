@@ -45,7 +45,7 @@
 - icon-chooser-dialog: Allow removing selected icon (Fixes #2)
 - desktop-item-edit: Fix sensitivity of save button (Fixes #28)
 - Rework exo_icon_view_scroll_event for overshoot effect (Fixes #25)
-- Allow resizing the xfce4-settings window smaller (Fixes #19)
+- Allow resizing the expidus1-settings window smaller (Fixes #19)
 - Drop exo-csource from exo
 - Fix build on OpenBSD (!2)
 - Fix race condition in make install (Fixes #29)
@@ -58,8 +58,8 @@
 
 4.15.1
 ======
-This release transitions several exo components to xfce-settings.
-Please use with xfce-settings 4.15.1 or later for best results.
+This release transitions several exo components to expidus-settings.
+Please use with expidus-settings 4.15.1 or later for best results.
 - Removed binaries: exo-compose-mail, exo-helper-2
 - Removed from API: ExoCellRendererEllipsizedText, 
   ExoIconBar, ExoToolbarsEditor, ExoToolbarsEditorDialog, 
@@ -77,7 +77,7 @@ Other Updates:
 - Do not cancel selection on shift+drag
 - Rename Thunar.desktop to thunar.desktop (Bug #16197)
 - Fix type declaration (Bug #16678)
-- desktop-item-edit: Use new XfceTitledDialog API
+- desktop-item-edit: Use new ExpidusTitledDialog API
 - Fix GTimeVal deprecation
 - Replace deprecated G_INLINE_FUNC macro
 - Replace deprecated macro
@@ -100,26 +100,26 @@ Other Updates:
   - Add *.mo to .gitignore
 - Bug Fixes:
   - Revert padding patches that add too much padding in the Thunar
-    compact view (Xfce #16196)
+    compact view (Expidus #16196)
 
 0.12.10
 =======
 - Bug Fixes:
-  - Fix typeahead search regression (Xfce #16191)
+  - Fix typeahead search regression (Expidus #16191)
 - Translation Updates:
   Spanish
 
 0.12.9
 ======
 - Bug Fixes:
-  - Explicitly depend on gio-unix-2.0 (Xfce #15825)
-  - Fix alignment of multi-line filenames when text beside icons (Xfce #16107)
-  - Fix cursor missing in search popup widget (Xfce #16068)
+  - Explicitly depend on gio-unix-2.0 (Expidus #15825)
+  - Fix alignment of multi-line filenames when text beside icons (Expidus #16107)
+  - Fix cursor missing in search popup widget (Expidus #16068)
   - Fix desktop item creation on symbolic link directories
-  - Fix excess clickable area of multiline filenames (Xfce #16075)
-  - Fix issues with displaying icon view contents (Xfce #14737)
-  - Fix prelight deactivation (Xfce #11806)
-  - Hide search widget when doing a fullscreen resize (Xfce #15106)
+  - Fix excess clickable area of multiline filenames (Expidus #16075)
+  - Fix issues with displaying icon view contents (Expidus #14737)
+  - Fix prelight deactivation (Expidus #11806)
+  - Hide search widget when doing a fullscreen resize (Expidus #15106)
   - Make user-created launchers executable by default
 - Translation Updates:
   Croatian, English (United Kingdom), French, Galician, Korean,
@@ -141,10 +141,10 @@ Other Updates:
 0.12.6
 ======
 - Bug Fixes:
-  - Add trailing ";" to mimeapps.list (Xfce #15087)
-  - Clear bad entries from mimeapps.list (Xfce #15046, #15238)
-  - Synchronize default applications to gio-mime (Xfce #14633)
-  - Disable emoji menu in type-ahead search (Xfce #15451)
+  - Add trailing ";" to mimeapps.list (Expidus #15087)
+  - Clear bad entries from mimeapps.list (Expidus #15046, #15238)
+  - Synchronize default applications to gio-mime (Expidus #14633)
+  - Disable emoji menu in type-ahead search (Expidus #15451)
   - Enable dismissal of "Failed to open default" dialogs
     - Related: https://github.com/brave/brave-browser/issues/4142
     - If the error can be safely ignored, the user is able to dismiss
@@ -158,9 +158,9 @@ Other Updates:
 0.12.5
 ======
 - Bug Fixes:
-  - Fix typehead in ExoIconView (Xfce #15100)
+  - Fix typehead in ExoIconView (Expidus #15100)
 - Build Updates:
-  - Building libexo-1 can now be disabled (Xfce #15138, #15199)
+  - Building libexo-1 can now be disabled (Expidus #15138, #15199)
     - Building documentation still requires libexo-1 since some older
       symbols exists only in the GTK+ 2 library
   - Several components were moved around to align with the correct
@@ -178,10 +178,10 @@ Other Updates:
 0.12.4
 ======
 - General:
-  - Use the standard shared thumbnails directory (Xfce #14799)
+  - Use the standard shared thumbnails directory (Expidus #14799)
 - Bug Fixes:
-  - ExoCellRendererIcon: Fix highlight rendering with GTK 3 (Xfce #14971)
-  - ExoIconView: Fix search popup placement (Xfce #14994)
+  - ExoCellRendererIcon: Fix highlight rendering with GTK 3 (Expidus #14971)
+  - ExoIconView: Fix search popup placement (Expidus #14994)
 - Translation Updates: Belarusian, Catalan, Chinese (China), German,
   Hungarian, Icelandic, Italian, Kannada, Korean, Lithuanian, Malay,
   Portuguese, Portuguese (Brazil), Russian, Serbian, Slovak, Spanish, Thai
@@ -192,8 +192,8 @@ Other Updates:
   - Preferred Applications: Improved layout spacing and alignment
   - Resolved g_type_class_add_private deprecations (GObject 2.58)
 - Bug Fixes:
-  - Hide exo launchers from GNOME Software (Xfce #14588)
-  - Fix crash with "preedit-changed" signal (Xfce #14756)
+  - Hide exo launchers from GNOME Software (Expidus #14588)
+  - Fix crash with "preedit-changed" signal (Expidus #14756)
 - Translation updates: Albanian, Amharic, Arabic, Asturian, Basque,
   Belarusian, Bengali, Bulgarian, Catalan, Chinese (China),
   Chinese (Hong Kong), Chinese (Taiwan), Croatian, Czech, Danish,
@@ -208,15 +208,15 @@ Other Updates:
 0.12.2 (Stable Release)
 ======
 - Bug Fixes:
-  - Fix crash with ExoJob, Thunar (Xfce #14465)
+  - Fix crash with ExoJob, Thunar (Expidus #14465)
 - Translation updates: Chinese (China), Danish
 
 0.12.1 (Stable Release)
 ======
 - Bug Fixes:
-  - Use "user-bookmarks" instead of "bookmark-new" (Xfce #14243)
-  - Properly scale application icons in Preferred Apps dialog (Xfce #14362)
-  - Remove pure attribute of function that returns void (Xfce #14427)
+  - Use "user-bookmarks" instead of "bookmark-new" (Expidus #14243)
+  - Properly scale application icons in Preferred Apps dialog (Expidus #14362)
+  - Remove pure attribute of function that returns void (Expidus #14427)
   - Missing varargs init or cleanup (CID #30799)
   - Uninitialized scalar variable (CID #127777)
 - Compiler Support:
@@ -224,7 +224,7 @@ Other Updates:
   - Fix various other compiler warnings (GCC 7)
   - Fix -Wcast-function-type (GCC 8)
 - Helpers:
-  - Add PCManFM-Qt (from LXQt) to supported file managers (Xfce #14333)
+  - Add PCManFM-Qt (from LXQt) to supported file managers (Expidus #14333)
 - ExoIconChooserDialog
   - Drop deprecated International icon context, add Stock icon context
   - Increase icon chooser context title length to support long translations
@@ -238,10 +238,10 @@ Other Updates:
 0.12.0 (Stable Release)
 ======
 - Bug Fixes:
-  - Add google-chrome-stable binary for the google-chrome helper (Xfce #13876)
+  - Add google-chrome-stable binary for the google-chrome helper (Expidus #13876)
 - Build Changes:
-  - Requirements updated: GTK 2.24, GTK 3.22, GLib 2.42, libxfce4ui 4.12,
-    libxfce4util 4.12
+  - Requirements updated: GTK 2.24, GTK 3.22, GLib 2.42, libexpidus1ui 4.12,
+    libexpidus1util 4.12
 - Translation Updates: Albanian, Amharic, Arabic, Asturian, Basque,
   Belarusian, Bengali, Bulgarian, Catalan, Chinese (China),
   Chinese (Hong Kong), Chinese (Taiwan), Croatian, Czech, Danish, Dutch,
@@ -257,12 +257,12 @@ Other Updates:
 ======
 - New Features:
   - ExoString: Added new exo_str_is_flag
-  - Helpers: Added Terminator (TerminalEmulator) (Xfce #13714)
+  - Helpers: Added Terminator (TerminalEmulator) (Expidus #13714)
 - Bug Fixes:
-  - exo-helper: Use full custom command path (Xfce #4093)
-  - exo-launch: Pass flags to preferred application (Xfce #9427)
-  - Replaced internet-mail icon with FD.o compliant emblem-mail (Xfce #13711)
-  - Dropped conflicting Vivaldi helper (Xfce #13712, Gentoo #624546)
+  - exo-helper: Use full custom command path (Expidus #4093)
+  - exo-launch: Pass flags to preferred application (Expidus #9427)
+  - Replaced internet-mail icon with FD.o compliant emblem-mail (Expidus #13711)
+  - Dropped conflicting Vivaldi helper (Expidus #13712, Gentoo #624546)
 - Translation Updates: Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
   Croatian, Danish, Dutch, French, German, Hebrew, Indonesian, Kazakh, Korean,
   Lithuanian, Norwegian Bokmal, Polish, Portuguese (Brazil), Russian, Spanish,
@@ -272,7 +272,7 @@ Other Updates:
 ======
 From a development standpoint, this release can be considered the first release
 candidate for the 0.12.x series. Full GTK+ 2 and 3 support is now available
-and should meet the needs for any Xfce application development.
+and should meet the needs for any Expidus application development.
 - New Features:
   - GTK Extensions: Added new exo_gtk_dialog_get_action_area and
     exo_gtk_dialog_add_secondary_button
@@ -281,7 +281,7 @@ and should meet the needs for any Xfce application development.
   - Helpers: Added Geary (MailReader)
   - Helpers: Dropped Opera Mail (no longer available for Linux)
 - Bug Fixes:
-  - Removed --disable-debug flag from distcheck (Xfce #11556)
+  - Removed --disable-debug flag from distcheck (Expidus #11556)
 - Icons:
   - Replaced non-standard gnome-* icons
   - Replaced non-existent "missing-image" icon
@@ -298,19 +298,19 @@ and should meet the needs for any Xfce application development.
 0.11.3 (Development Release)
 ======
 - New Features:
-  - exo-csource: Add --output flag to write output to a file (Xfce #12901)
-  - exo-helper: Add --query flag to query the preferred application (Xfce #8579)
+  - exo-csource: Add --output flag to write output to a file (Expidus #12901)
+  - exo-helper: Add --query flag to query the preferred application (Expidus #8579)
 - Build Changes:
-  - Requirements updated: GTK 2.24, GTK 3.20, GLib 2.42, libxfce4ui 4.12
+  - Requirements updated: GTK 2.24, GTK 3.20, GLib 2.42, libexpidus1ui 4.12
   - GTK 3 libraries are no longer optional
   - Default debug for development builds is now "yes" instead of "full"
 - Bug Fixes:
-  - Discard preferred application selection if dialog is canceled (Xfce #8802)
-  - Do not ship generic category icons, these are standard (Xfce #9992)
-  - Do not abort builds due to deprecated declarations (Xfce #11556)
-  - Fix crash in Thunar on selection change after directory change (Xfce #13238)
-  - Fix crash in exo-helper-1 from GTK 3 migration (Xfce #13374)
-  - Fix ExoIconView being unable to decrease its size (Xfce #13402)
+  - Discard preferred application selection if dialog is canceled (Expidus #8802)
+  - Do not ship generic category icons, these are standard (Expidus #9992)
+  - Do not abort builds due to deprecated declarations (Expidus #11556)
+  - Fix crash in Thunar on selection change after directory change (Expidus #13238)
+  - Fix crash in exo-helper-1 from GTK 3 migration (Expidus #13374)
+  - Fix ExoIconView being unable to decrease its size (Expidus #13402)
 - Documentation Updates:
   - Add missing per-release API indices
   - Resolve undocumented symbols
@@ -329,7 +329,7 @@ and should meet the needs for any Xfce application development.
   - Resolve gdk_cursor_* deprecated warnings
   - Resolve gdk_threads_* deprecated warnings
 - Fixed vertical alignment of options in preferred applications
-- Fixed issue with Thunar detailed view losing selection (Xfce #12916)
+- Fixed issue with Thunar detailed view losing selection (Expidus #12916)
 - Translation updates: Asturian, English (Australia), Italian, Kazakh,
   Lithuanian, Malay, Polish, Portuguese, Romanian, Russian, Thai
 
@@ -370,14 +370,14 @@ and should meet the needs for any Xfce application development.
 - File descriptor was never opened if < 0 (CID #85387)
 - Reverted patches that broke window focus on startup (bug #11743)
   - Fix StartupNotify (bug #9570)
-  - Fix implicit declaration of function 'xfce_spawn_on_screen' (bug #11655)
+  - Fix implicit declaration of function 'expidus_spawn_on_screen' (bug #11655)
 - Translation updates: Basque, Greek, Lithuanian, Spanish, Swedish
 
 0.10.4
 ======
 - Don't quote arguments passed to terminal emulators (bug #10731)
 - Fix StartupNotify (bug #9570)
-- Fix implicit declaration of function 'xfce_spawn_on_screen' (bug #11655)
+- Fix implicit declaration of function 'expidus_spawn_on_screen' (bug #11655)
 - Translation updates: Korean, Malay, Polish, German, Italian, Croatian
 
 0.10.3
@@ -411,7 +411,7 @@ and should meet the needs for any Xfce application development.
 - Work with icon names in the toolbar editor.
 - GIO unix is still used for exo-open (bug #9679).
 - Use same thumbnail frame as Thunar.
-- Rename Terminal to xfce4-terminal.
+- Rename Terminal to expidus1-terminal.
 - Remove unmaintained translations.
 - Add chromium-browser to binary names (bug #9584).
 - Add various helpers.
@@ -486,7 +486,7 @@ and should meet the needs for any Xfce application development.
 0.7.2
 =====
 - Drop gtk 2.24 api (bug #8461).
-- Bump libxfce4ui dependency for help function.
+- Bump libexpidus1ui dependency for help function.
 - Send exo-open startup-id to child instead of using it (bug #7093).
 - Translation updates (ar, ca, cs, da, de, es, eu, fi, fr, he, id,
   it, kk, ko, lt, nl, pl, pt, ru, sk, tr, uk, zh_CN, zh_TW).
@@ -506,7 +506,7 @@ and should meet the needs for any Xfce application development.
 0.7.0
 =====
 - Do not insert symlink icons in the icon chooser.
-- Use libxfce4ui instead of support library.
+- Use libexpidus1ui instead of support library.
 - Drop the python bindings.
 - Use new libtool macros and versions (bug #6920).
 - Remove spec file and rpm build.
@@ -691,7 +691,7 @@ Other changes:
 ======
 - Don't setup bindings for <Shift>n and <Shift>p in ExoIconView so that
   type-ahead search works as expected (bug #4633).
-- Remove GenericName and "Xfce 4" prefix from
+- Remove GenericName and "Expidus 4" prefix from
   exo-preferred-applications.desktop.
 - Stop startup notification once the plug is created and the helper
   settings dialog content has been moved into the plug.
@@ -831,11 +831,11 @@ Other changes:
 
 0.3.1.8beta2
 ============
-- Imported the "Xfce Preferred Applications" framework, which allows users to
+- Imported the "Expidus Preferred Applications" framework, which allows users to
   select their preferred applications (i.e. web browser, mail reader, terminal
   emulator) using a nice graphical interface, rather than having to figure out
-  where to add which environment variable to make Xfce use Firefox as default
-  web browser. The "Xfce Preferred Applications" framework can also pass
+  where to add which environment variable to make Expidus use Firefox as default
+  web browser. The "Expidus Preferred Applications" framework can also pass
   additional information when composing emails using the preferred mail reader,
   for example, you can use the extended mailto:-syntax to open the composer
   with a predefined subject and automatically attached files.
@@ -926,7 +926,7 @@ Other changes:
   ExoToolbarsEditor and ExoToolbarsEditorDialog).
 - Added initial API reference documentation.
 - Added version information variables and macros similar to whats used
-  in Xfce and Gtk+.
+  in Expidus and Gtk+.
 
 
 0.1.2
@@ -940,7 +940,7 @@ Other changes:
 
 0.1.1
 =====
-- An ICE module was added, based upon the ice-layer from xfce4-session and
+- An ICE module was added, based upon the ice-layer from expidus1-session and
   the gnome-ice module of libgnomeui.
 - libexo no longer requires SSL on non-BSD systems, since a MD5 fallback
   implementation was added, which will be used if the system doesn't

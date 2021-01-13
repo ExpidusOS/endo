@@ -28,9 +28,9 @@ exo_desktop_item_edit_SOURCES =						\
 exo_desktop_item_edit_CFLAGS =						\
 	$(GTK_CFLAGS)							\
 	$(GTHREAD_CFLAGS)						\
-	$(LIBXFCE4UTIL_CFLAGS)						\
+	$(LIBEXPIDUS1UTIL_CFLAGS)						\
 	$(GIO_CFLAGS)							\
-	$(LIBXFCE4UI_CFLAGS)
+	$(LIBEXPIDUS1UI_CFLAGS)
 
 exo_desktop_item_edit_LDFLAGS =						\
 	-no-undefined
@@ -41,9 +41,9 @@ exo_desktop_item_edit_DEPENDENCIES =					\
 exo_desktop_item_edit_LDADD =						\
 	$(GTK_LIBS)							\
 	$(GTHREAD_LIBS)							\
-	$(LIBXFCE4UTIL_LIBS)						\
+	$(LIBEXPIDUS1UTIL_LIBS)						\
 	$(GIO_LIBS)							\
-	$(LIBXFCE4UI_LIBS)						\
+	$(LIBEXPIDUS1UI_LIBS)						\
 	$(top_builddir)/exo/libexo-2.la
 
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

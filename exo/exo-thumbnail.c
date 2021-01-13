@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005-2006 Benedikt Meurer <benny@xfce.org>
+ * Copyright (c) 2005-2006 Benedikt Meurer <benny@expidus.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -48,7 +48,7 @@
 #include <unistd.h>
 #endif
 
-#include <libxfce4util/libxfce4util.h>
+#include <libexpidus1util/libexpidus1util.h>
 
 #include <exo/exo-gdk-pixbuf-extensions.h>
 #include <exo/exo-private.h>
@@ -127,7 +127,7 @@ exo_thumbnail_save (GdkPixbuf   *thumbnail,
 
   /* verify that the thumbnail directory exists */
   dirname = g_path_get_dirname (thumbnail_path);
-  succeed = xfce_mkdirhier (dirname, 0700, error);
+  succeed = expidus_mkdirhier (dirname, 0700, error);
   g_free (dirname);
 
   /* check if we succeed so far */

@@ -17,7 +17,7 @@ test_exo_noop_SOURCES =							\
 
 test_exo_noop_CFLAGS =                                                 \
 	$(GTK_CFLAGS)                                                  \
-	$(LIBXFCE4UTIL_CFLAGS)
+	$(LIBEXPIDUS1UTIL_CFLAGS)
 
 test_exo_noop_DEPENDENCIES =						\
 	$(top_builddir)/exo/libexo-$(LIBEXO_VERSION_API).la
@@ -31,7 +31,7 @@ test_exo_string_SOURCES =						\
 
 test_exo_string_CFLAGS =                                               \
 	$(GTK_CFLAGS)                                                  \
-	$(LIBXFCE4UTIL_CFLAGS)
+	$(LIBEXPIDUS1UTIL_CFLAGS)
 
 test_exo_string_DEPENDENCIES =						\
 	$(top_builddir)/exo/libexo-$(LIBEXO_VERSION_API).la
@@ -48,7 +48,7 @@ test_exo_icon_chooser_dialog_DEPENDENCIES =				\
 
 test_exo_icon_chooser_dialog_CFLAGS =					\
 	$(GTK_CFLAGS)							\
-	$(LIBXFCE4UTIL_CFLAGS)
+	$(LIBEXPIDUS1UTIL_CFLAGS)
 
 test_exo_icon_chooser_dialog_LDADD =					\
 	$(GTK_LIBS)							\

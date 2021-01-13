@@ -4,7 +4,7 @@ AM_CPPFLAGS = 								\
 	-DDATADIR=\"$(datadir)\"					\
 	-DEXO_COMPILATION						\
 	-DG_LOG_DOMAIN=\"exo\"						\
-	-DHELPERDIR=\"$(HELPER_PATH_PREFIX)/xfce4/exo-$(LIBEXO_VERSION_API)\"	\
+	-DHELPERDIR=\"$(HELPER_PATH_PREFIX)/expidus1/exo-$(LIBEXO_VERSION_API)\"	\
 	-DLIBEXO_VERSION_API=\"$(LIBEXO_VERSION_API)\"			\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"
 
@@ -82,7 +82,7 @@ libexo_2_la_SOURCES =							\
 	exo-tree-view.c
 
 libexo_2_la_CFLAGS =							\
-	$(LIBXFCE4UTIL_CFLAGS)						\
+	$(LIBEXPIDUS1UTIL_CFLAGS)						\
 	$(GIO_CFLAGS)							\
 	$(GTK_CFLAGS)							\
 	$(LIBX11_CFLAGS)
@@ -94,7 +94,7 @@ libexo_2_la_LDFLAGS =							\
 	-no-undefined
 
 libexo_2_la_LIBADD =							\
-	$(LIBXFCE4UTIL_LIBS)						\
+	$(LIBEXPIDUS1UTIL_LIBS)						\
 	$(GIO_LIBS)							\
 	$(GIO_UNIX_LIBS)							\
 	$(GTK_LIBS)							\
@@ -140,7 +140,7 @@ exo-enum-types.h: stamp-exo-enum-types.h
 	@true
 stamp-exo-enum-types.h: $(libexo_headers) Makefile
 	$(AM_V_GEN) ( cd $(srcdir) && glib-mkenums \
-		--fhead "#ifndef __EXO_ENUM_TYPES_H__\n#define __EXO_ENUM_TYPES_H__\n#include <libxfce4util/libxfce4util.h>\nG_BEGIN_DECLS\n" \
+		--fhead "#ifndef __EXO_ENUM_TYPES_H__\n#define __EXO_ENUM_TYPES_H__\n#include <libexpidus1util/libexpidus1util.h>\nG_BEGIN_DECLS\n" \
 		--fprod "/* enumerations from \"@filename@\" */\n" \
 		--vhead "GType @enum_name@_get_type (void) G_GNUC_CONST;\n#define EXO_TYPE_@ENUMSHORT@ (@enum_name@_get_type())\n" \
 		--ftail "G_END_DECLS\n\n#endif /* !__EXO_ENUM_TYPES_H__ */" \

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2006 Benedikt Meurer <benny@xfce.org>.
+ * Copyright (c) 2006 Benedikt Meurer <benny@expidus.org>.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -523,7 +523,7 @@ exo_die_desktop_model_collect_thread (gpointer user_data)
   guint               n;
 
   /* determine the available applications/ directories */
-  paths = xfce_resource_lookup_all (XFCE_RESOURCE_DATA, "applications/");
+  paths = expidus_resource_lookup_all (EXPIDUS_RESOURCE_DATA, "applications/");
   for (n = 0; !desktop_model->collect_cancelled && paths[n] != NULL; ++n)
     {
       /* collect this directory */
@@ -564,23 +564,23 @@ exo_die_desktop_item_new_from_file (const gchar *file)
   const gchar       *icon;
   const gchar       *name;
   const gchar       *type;
-  XfceRc            *rc;
+  ExpidusRc            *rc;
   gint               icon_len;
 
   /* try to open the file */
-  rc = xfce_rc_simple_open (file, TRUE);
+  rc = expidus_rc_simple_open (file, TRUE);
   if (G_LIKELY (rc != NULL))
     {
       /* skip hidden items to avoid confusion */
-      xfce_rc_set_group (rc, "Desktop Entry");
-      if (!xfce_rc_read_bool_entry (rc, "Hidden", FALSE) && !xfce_rc_read_bool_entry (rc, "NoDisplay", FALSE))
+      expidus_rc_set_group (rc, "Desktop Entry");
+      if (!expidus_rc_read_bool_entry (rc, "Hidden", FALSE) && !expidus_rc_read_bool_entry (rc, "NoDisplay", FALSE))
         {
           /* determine the attributes from the file */
-          command = xfce_rc_read_entry_untranslated (rc, "Exec", NULL);
-          comment = xfce_rc_read_entry (rc, "Comment", NULL);
-          icon = xfce_rc_read_entry (rc, "Icon", NULL);
-          name = xfce_rc_read_entry (rc, "Name", NULL);
-          type = xfce_rc_read_entry (rc, "Type", "Application");
+          command = expidus_rc_read_entry_untranslated (rc, "Exec", NULL);
+          comment = expidus_rc_read_entry (rc, "Comment", NULL);
+          icon = expidus_rc_read_entry (rc, "Icon", NULL);
+          name = expidus_rc_read_entry (rc, "Name", NULL);
+          type = expidus_rc_read_entry (rc, "Type", "Application");
 
           /* check if the required attributes were found (and we have an Application) */
           if (G_LIKELY (strcmp (type, "Application") == 0 && command != NULL && name != NULL))
@@ -601,8 +601,8 @@ exo_die_desktop_item_new_from_file (const gchar *file)
                     desktop_item->icon[icon_len - 4] = '\0';
                 }
 
-              /* strip the "Xfce 4 " prefix from the names */
-              if (strncmp (desktop_item->name, "Xfce 4 ", 7) == 0)
+              /* strip the "Expidus 4 " prefix from the names */
+              if (strncmp (desktop_item->name, "Expidus 4 ", 7) == 0)
                 {
                   /* release the full name */
                   g_free (desktop_item->name);
@@ -612,15 +612,15 @@ exo_die_desktop_item_new_from_file (const gchar *file)
                 }
 
               /* check if startup notification is supported */
-              desktop_item->snotify = (xfce_rc_read_bool_entry (rc, "StartupNotify", FALSE) || xfce_rc_read_bool_entry (rc, "X-KDE-StartupNotify", FALSE));
+              desktop_item->snotify = (expidus_rc_read_bool_entry (rc, "StartupNotify", FALSE) || expidus_rc_read_bool_entry (rc, "X-KDE-StartupNotify", FALSE));
 
               /* check if should be run in terminal */
-              desktop_item->terminal = xfce_rc_read_bool_entry (rc, "Terminal", FALSE) ? TRUE : FALSE;
+              desktop_item->terminal = expidus_rc_read_bool_entry (rc, "Terminal", FALSE) ? TRUE : FALSE;
             }
         }
 
       /* close the file */
-      xfce_rc_close (rc);
+      expidus_rc_close (rc);
     }
 
   return desktop_item;

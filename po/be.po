@@ -15,7 +15,7 @@ msgstr ""
 "POT-Creation-Date: 2020-10-24 12:45+0200\n"
 "PO-Revision-Date: 2020-12-29 08:52+0000\n"
 "Last-Translator: Źmicier Turok <nashtlumach@gmail.com>\n"
-"Language-Team: Belarusian (http://www.transifex.com/xfce/exo/language/be/)\n"
+"Language-Team: Belarusian (http://www.transifex.com/expidus/exo/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -444,7 +444,7 @@ msgstr "Параметры:"
 #. TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to
 #. avoid mnemonic conflicts
 #. *              and sync your translations with the translations in Thunar
-#. and xfce4-panel.
+#. and expidus1-panel.
 #: ../exo-desktop-item-edit/exo-die-editor.c:421
 msgid "Use _startup notification"
 msgstr "Выкарыстоўваць _апавяшчэнне пра запуск"
@@ -459,7 +459,7 @@ msgstr "Абярыце параметр, каб уключыць інфарма�
 #. TRANSLATORS: Check button label in "Create Launcher" dialog, make sure to
 #. avoid mnemonic conflicts
 #. *              and sync your translations with the translations in Thunar
-#. and xfce4-panel.
+#. and expidus1-panel.
 #: ../exo-desktop-item-edit/exo-die-editor.c:435
 msgid "Run in _terminal"
 msgstr "Запускаць у _тэрмінале"
@@ -560,9 +560,9 @@ msgid ""
 "Copyright (c) %s\n"
 "        os-cillation e.K. All rights reserved.\n"
 "\n"
-"Written by Benedikt Meurer <benny@xfce.org>.\n"
+"Written by Benedikt Meurer <benny@expidus.org>.\n"
 "\n"
-msgstr "Copyright (c) %s\n        os-cillation e.K. Усе правы абароненыя.\n\nАўтар: Benedikt Meurer <benny@xfce.org>.\n\n"
+msgstr "Copyright (c) %s\n        os-cillation e.K. Усе правы абароненыя.\n\nАўтар: Benedikt Meurer <benny@expidus.org>.\n\n"
 
 #: ../exo-desktop-item-edit/main.c:203 ../exo-open/main.c:621
 #, c-format
@@ -676,7 +676,7 @@ msgstr "Загадам --launch падтрымліваюцца наступны�
 
 #. Note to Translators: Do not translate the TYPEs (WebBrowser, MailReader,
 #. TerminalEmulator),
-#. * since the xfce4-mime-helper utility will not accept localized TYPEs.
+#. * since the expidus1-mime-helper utility will not accept localized TYPEs.
 #: ../exo-open/main.c:128
 msgid ""
 "  WebBrowser       - The preferred Web Browser.\n"

@@ -2,15 +2,15 @@
 
   Copyright (c) 2006 os-cillation
 
-  Written by Benedikt Meurer <benny@xfce.org>
+  Written by Benedikt Meurer <benny@expidus.org>
 -->
 
 <refentry id="exo-open">
   <refmeta>
     <refentrytitle>exo-open</refentrytitle>
     <manvolnum>1</manvolnum>
-    <refmiscinfo class="manual">Xfce User's Manual</refmiscinfo>
-    <refmiscinfo class="source">Xfce</refmiscinfo>
+    <refmiscinfo class="manual">Expidus User's Manual</refmiscinfo>
+    <refmiscinfo class="source">Expidus</refmiscinfo>
   </refmeta>
 
   <refnamediv>
@@ -38,7 +38,7 @@
   <refsect1>
     <title>Description</title>
     <para>
-      <command>exo-open</command> is a command line frontend to the <emphasis role="bold">Xfce Preferred Applications</emphasis>
+      <command>exo-open</command> is a command line frontend to the <emphasis role="bold">Expidus Preferred Applications</emphasis>
       framework. It can either be used to open a list of <parameter>url</parameter>s with the default URL handler or launch
       the preferred application for a certain category.
     </para>
@@ -123,10 +123,10 @@
   <refsect1>
     <title>Author</title>
     <para>
-      <command>exo-open</command> was written by Benedikt Meurer <email>benny@xfce.org</email>.
+      <command>exo-open</command> was written by Benedikt Meurer <email>benny@expidus.org</email>.
     </para>
     <para>
-      This manual page was provided by Benedikt Meurer <email>benny@xfce.org</email>.
+      This manual page was provided by Benedikt Meurer <email>benny@expidus.org</email>.
     </para>
   </refsect1>
 
