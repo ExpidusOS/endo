@@ -13,17 +13,17 @@
 ======
 - Re-grab tree selection to prevent rare crash (Issue #46)
 - Remove unneeded RTL adjustment (Issue #45)
-- exo-open: Wrap long URI in error dialog (Issue #26)
+- endo-open: Wrap long URI in error dialog (Issue #26)
 - Avoid truncated text in small zoom levels (#42)
-- Make ExoIconView reduce selection on a single click (issue #39)
+- Make EndoIconView reduce selection on a single click (issue #39)
 - Partially restore 6fcefce9 (Issue #18)
 - Adds new, foreign README.md
 - Add check for valid GtkTreeSelection (issue #40)
 - Reset cursor on drag end in single-click mode
-- exo-open: Change priority of command line parameters (Fixes #20)
+- endo-open: Change priority of command line parameters (Fixes #20)
 - Prevent label from overlapping icon in RTL (Fixes #36)
 - Prevent "selection_changed" bursts (#37)
-- Small change to documentation for exo_strdup_strftime
+- Small change to documentation for endo_strdup_strftime
 - desktop-item-edit: Fix fallback for desktop file type detection
 - desktop-item-edit: Improve detection of invalid icon names (Fixes #33)
 - AC_CONFIG_MACRO_DIR → AC_CONFIG_MACRO_DIRS (Closes !9)
@@ -44,9 +44,9 @@
 ======
 - icon-chooser-dialog: Allow removing selected icon (Fixes #2)
 - desktop-item-edit: Fix sensitivity of save button (Fixes #28)
-- Rework exo_icon_view_scroll_event for overshoot effect (Fixes #25)
+- Rework endo_icon_view_scroll_event for overshoot effect (Fixes #25)
 - Allow resizing the expidus1-settings window smaller (Fixes #19)
-- Drop exo-csource from exo
+- Drop endo-csource from endo
 - Fix build on OpenBSD (!2)
 - Fix race condition in make install (Fixes #29)
 - Remove unused perl module requirement
@@ -58,13 +58,13 @@
 
 4.15.1
 ======
-This release transitions several exo components to expidus-settings.
+This release transitions several endo components to expidus-settings.
 Please use with expidus-settings 4.15.1 or later for best results.
-- Removed binaries: exo-compose-mail, exo-helper-2
-- Removed from API: ExoCellRendererEllipsizedText, 
-  ExoIconBar, ExoToolbarsEditor, ExoToolbarsEditorDialog, 
-  ExoToolbarsModel, ExoToolbarsView, ExoWrapTable, ExoXsessionClient,
-  exo_atomic_inc, exo_atomic_dec
+- Removed binaries: endo-compose-mail, endo-helper-2
+- Removed from API: EndoCellRendererEllipsizedText, 
+  EndoIconBar, EndoToolbarsEditor, EndoToolbarsEditorDialog, 
+  EndoToolbarsModel, EndoToolbarsView, EndoWrapTable, EndoXsessionClient,
+  endo_atomic_inc, endo_atomic_dec
 
 Other Updates:
 - state variable is a GtkStateFlags
@@ -81,7 +81,7 @@ Other Updates:
 - Fix GTimeVal deprecation
 - Replace deprecated G_INLINE_FUNC macro
 - Replace deprecated macro
-- Wrong keyboard navigation after using rubberband in exo-icon-view (Bug #16286)
+- Wrong keyboard navigation after using rubberband in endo-icon-view (Bug #16286)
 - Cursor position in icon view not visible/highlighted when using ctrl + arrows (Bug #12227)
 - Make sure default applications are properly set in mimeapps.list
 - Translation Updates:
@@ -158,18 +158,18 @@ Other Updates:
 0.12.5
 ======
 - Bug Fixes:
-  - Fix typehead in ExoIconView (Expidus #15100)
+  - Fix typehead in EndoIconView (Expidus #15100)
 - Build Updates:
-  - Building libexo-1 can now be disabled (Expidus #15138, #15199)
-    - Building documentation still requires libexo-1 since some older
+  - Building libendo-1 can now be disabled (Expidus #15138, #15199)
+    - Building documentation still requires libendo-1 since some older
       symbols exists only in the GTK+ 2 library
   - Several components were moved around to align with the correct
     library versions:
-    - Helpers are now installed in exo-2 paths, and exo-helper-1 has
-      been renamed to exo-helper-2 to follow the library version
-    - Pixmaps were moved to an unversioned path (pixmaps/exo) since
+    - Helpers are now installed in endo-2 paths, and endo-helper-1 has
+      been renamed to endo-helper-2 to follow the library version
+    - Pixmaps were moved to an unversioned path (pixmaps/endo) since
       they are used by both versions of the library
-    - exo-compose-mail has dropped the library version since it
+    - endo-compose-mail has dropped the library version since it
       does not depend on either version of the library
   - The expansion-to-defined flag was re-enabled
 - Translation Updates: Albanian, Bulgarian, Danish, Dutch,
@@ -180,8 +180,8 @@ Other Updates:
 - General:
   - Use the standard shared thumbnails directory (Expidus #14799)
 - Bug Fixes:
-  - ExoCellRendererIcon: Fix highlight rendering with GTK 3 (Expidus #14971)
-  - ExoIconView: Fix search popup placement (Expidus #14994)
+  - EndoCellRendererIcon: Fix highlight rendering with GTK 3 (Expidus #14971)
+  - EndoIconView: Fix search popup placement (Expidus #14994)
 - Translation Updates: Belarusian, Catalan, Chinese (China), German,
   Hungarian, Icelandic, Italian, Kannada, Korean, Lithuanian, Malay,
   Portuguese, Portuguese (Brazil), Russian, Serbian, Slovak, Spanish, Thai
@@ -192,7 +192,7 @@ Other Updates:
   - Preferred Applications: Improved layout spacing and alignment
   - Resolved g_type_class_add_private deprecations (GObject 2.58)
 - Bug Fixes:
-  - Hide exo launchers from GNOME Software (Expidus #14588)
+  - Hide endo launchers from GNOME Software (Expidus #14588)
   - Fix crash with "preedit-changed" signal (Expidus #14756)
 - Translation updates: Albanian, Amharic, Arabic, Asturian, Basque,
   Belarusian, Bengali, Bulgarian, Catalan, Chinese (China),
@@ -208,7 +208,7 @@ Other Updates:
 0.12.2 (Stable Release)
 ======
 - Bug Fixes:
-  - Fix crash with ExoJob, Thunar (Expidus #14465)
+  - Fix crash with EndoJob, Thunar (Expidus #14465)
 - Translation updates: Chinese (China), Danish
 
 0.12.1 (Stable Release)
@@ -225,7 +225,7 @@ Other Updates:
   - Fix -Wcast-function-type (GCC 8)
 - Helpers:
   - Add PCManFM-Qt (from LXQt) to supported file managers (Expidus #14333)
-- ExoIconChooserDialog
+- EndoIconChooserDialog
   - Drop deprecated International icon context, add Stock icon context
   - Increase icon chooser context title length to support long translations
   - Skip symbolic icons to boost performance
@@ -256,11 +256,11 @@ Other Updates:
 0.11.5 (Development Release)
 ======
 - New Features:
-  - ExoString: Added new exo_str_is_flag
+  - EndoString: Added new endo_str_is_flag
   - Helpers: Added Terminator (TerminalEmulator) (Expidus #13714)
 - Bug Fixes:
-  - exo-helper: Use full custom command path (Expidus #4093)
-  - exo-launch: Pass flags to preferred application (Expidus #9427)
+  - endo-helper: Use full custom command path (Expidus #4093)
+  - endo-launch: Pass flags to preferred application (Expidus #9427)
   - Replaced internet-mail icon with FD.o compliant emblem-mail (Expidus #13711)
   - Dropped conflicting Vivaldi helper (Expidus #13712, Gentoo #624546)
 - Translation Updates: Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
@@ -274,9 +274,9 @@ From a development standpoint, this release can be considered the first release
 candidate for the 0.12.x series. Full GTK+ 2 and 3 support is now available
 and should meet the needs for any Expidus application development.
 - New Features:
-  - GTK Extensions: Added new exo_gtk_dialog_get_action_area and
-    exo_gtk_dialog_add_secondary_button
-  - GTK3: Added support for insensitive state in exo_cell_renderer_icon
+  - GTK Extensions: Added new endo_gtk_dialog_get_action_area and
+    endo_gtk_dialog_add_secondary_button
+  - GTK3: Added support for insensitive state in endo_cell_renderer_icon
   - Helpers: Added Brave, Google Chrome, and Vivaldi (WebBrowser)
   - Helpers: Added Geary (MailReader)
   - Helpers: Dropped Opera Mail (no longer available for Linux)
@@ -298,8 +298,8 @@ and should meet the needs for any Expidus application development.
 0.11.3 (Development Release)
 ======
 - New Features:
-  - exo-csource: Add --output flag to write output to a file (Expidus #12901)
-  - exo-helper: Add --query flag to query the preferred application (Expidus #8579)
+  - endo-csource: Add --output flag to write output to a file (Expidus #12901)
+  - endo-helper: Add --query flag to query the preferred application (Expidus #8579)
 - Build Changes:
   - Requirements updated: GTK 2.24, GTK 3.20, GLib 2.42, libexpidus1ui 4.12
   - GTK 3 libraries are no longer optional
@@ -309,8 +309,8 @@ and should meet the needs for any Expidus application development.
   - Do not ship generic category icons, these are standard (Expidus #9992)
   - Do not abort builds due to deprecated declarations (Expidus #11556)
   - Fix crash in Thunar on selection change after directory change (Expidus #13238)
-  - Fix crash in exo-helper-1 from GTK 3 migration (Expidus #13374)
-  - Fix ExoIconView being unable to decrease its size (Expidus #13402)
+  - Fix crash in endo-helper-1 from GTK 3 migration (Expidus #13374)
+  - Fix EndoIconView being unable to decrease its size (Expidus #13402)
 - Documentation Updates:
   - Add missing per-release API indices
   - Resolve undocumented symbols
@@ -335,7 +335,7 @@ and should meet the needs for any Expidus application development.
 
 0.11.1 (Development Release)
 ======
-- This release addresses a new bug introduced in 0.11.0 where exo
+- This release addresses a new bug introduced in 0.11.0 where endo
   did not correctly export the user's environment variables.
 - Translation updates: Chinese (China), Croatian, Swedish
 
@@ -366,7 +366,7 @@ and should meet the needs for any Expidus application development.
 - Added --disable-debug to distcheck rules, this will allow building
   with autogen.sh --disable-debug on newer systems (bug #11556)
 - Do not use x-scheme-handler/file mimetype (bug #7257)
-- Escape URIs for exo-open (bug #9912)
+- Escape URIs for endo-open (bug #9912)
 - File descriptor was never opened if < 0 (CID #85387)
 - Reverted patches that broke window focus on startup (bug #11743)
   - Fix StartupNotify (bug #9570)
@@ -387,12 +387,12 @@ and should meet the needs for any Expidus application development.
 - Updated mimeapps.list location for glib >= 2.41 (bug #11504)
 - Add an icon-column in the icon view for loading thumbnailed images
 - Add helpers for qtFM, QTerminal, Qupzilla, Surf, Vimprobable2 (bug #10216)
-- Add support for BCC in exo-compose-email (bug #11070)
-- Better handle filenames with spaces in exo-helpers (bug #10731)
+- Add support for BCC in endo-compose-email (bug #11070)
+- Better handle filenames with spaces in endo-helpers (bug #10731)
 - Drop use of the -remote option in Firefox helpers (bug #11601)
 - Fix ATK deprecation warnings (bug #11556)
-- Fix exo_str_looks_like_an_uri() (bug #10098)
-- Fix small typo in exo-icon-bar (bug #10515)
+- Fix endo_str_looks_like_an_uri() (bug #10098)
+- Fix small typo in endo-icon-bar (bug #10515)
 - Install category icons into proper location (bug #11364)
 - Scroll long file names into view in compact listview (bug #6014)
 - Translation updates: Albanian, Arabic, Asturian, Basque, Belarusian, Bengali,
@@ -409,7 +409,7 @@ and should meet the needs for any Expidus application development.
 ======
 - Optimize returning the selected item in icon view.
 - Work with icon names in the toolbar editor.
-- GIO unix is still used for exo-open (bug #9679).
+- GIO unix is still used for endo-open (bug #9679).
 - Use same thumbnail frame as Thunar.
 - Rename Terminal to expidus1-terminal.
 - Remove unmaintained translations.
@@ -424,10 +424,10 @@ and should meet the needs for any Expidus application development.
 
 0.10.0
 ======
-- Bump glib to 2.30 and drop exo-gio-module.
+- Bump glib to 2.30 and drop endo-gio-module.
 - Bump Gtk to 2.24.
 - Draw the rubberband identical to gtk (bug #9526).
-- Don't use GSimpleResult in ExoJob (bug #6222).
+- Don't use GSimpleResult in EndoJob (bug #6222).
 - Fix shadowed variable (bug #9493).
 - Translation updates: Arabic, Czech, Croatian, Korean.
 
@@ -435,7 +435,7 @@ and should meet the needs for any Expidus application development.
 =====
 - Drop the item index for the icon view.
 - Use unsigned int for idles and timeouts.
-- Add accessibility support to exo icon view.
+- Add accessibility support to endo icon view.
 - Use new thread functions if available.
 - Avoid deprecation warnings.
 - Protect against null value (bug #9418).
@@ -471,12 +471,12 @@ and should meet the needs for any Expidus application development.
 
 0.7.3
 =====
-- Enable startup-notify in the exo-open desktop files.
+- Enable startup-notify in the endo-open desktop files.
 - Use g_file_set_contents on local files.
 - Bump gtk to 2.20 and glib to 2.24.
 - Don't set invalid startup id.
 - Replace deprecated function g_strcasecmp (bug #8647).
-- Fix possible segfault in exo_str_looks_like_an_uri.
+- Fix possible segfault in endo_str_looks_like_an_uri.
 - Updates licenses.
 - Fix saving of desktop files in local dir.
 - Translation updates: Arabic, Greek, French, Galician, Japanese,
@@ -487,7 +487,7 @@ and should meet the needs for any Expidus application development.
 =====
 - Drop gtk 2.24 api (bug #8461).
 - Bump libexpidus1ui dependency for help function.
-- Send exo-open startup-id to child instead of using it (bug #7093).
+- Send endo-open startup-id to child instead of using it (bug #7093).
 - Translation updates (ar, ca, cs, da, de, es, eu, fi, fr, he, id,
   it, kk, ko, lt, nl, pl, pt, ru, sk, tr, uk, zh_CN, zh_TW).
 
@@ -496,8 +496,8 @@ and should meet the needs for any Expidus application development.
 - Add preferred app helper for Chromium (bug #8398).
 - Remove package manuals and link to online documentation.
 - Queue an icon view resize if the requesitions don't match.
-- Add new API exo_icon_view_get_item_{column,row}.
-- Add keynav-failed to ExoIconView.
+- Add new API endo_icon_view_get_item_{column,row}.
+- Add keynav-failed to EndoIconView.
 - Show Preferred Application in settings category.
 - Don't destroy already destroyed widget.
 - Translation updates: Chinese, Portuguese, Lithuanian, Norwegian,
@@ -511,8 +511,8 @@ and should meet the needs for any Expidus application development.
 - Use new libtool macros and versions (bug #6920).
 - Remove spec file and rpm build.
 - Silenty save to local application is permission denied to origional
-  file in exo-desktop-item-edit.
-- Support hexadecimal xid and center exo-desktop-item-edit on parent.
+  file in endo-desktop-item-edit.
+- Support hexadecimal xid and center endo-desktop-item-edit on parent.
 
 0.6.2
 =====
@@ -521,11 +521,11 @@ and should meet the needs for any Expidus application development.
 
 0.6.1
 =====
-- Improve exo-open url and email match regexes (bug #7281).
+- Improve endo-open url and email match regexes (bug #7281).
 - Create relative symlinks to doc images (bug #7379).
-- Remove mime-types from the exo helper desktop files (bug #7257).
+- Remove mime-types from the endo helper desktop files (bug #7257).
 - Drop unused variable.
-- Make exo-compose-mail-1 case-insensitive (bug #7472).
+- Make endo-compose-mail-1 case-insensitive (bug #7472).
 - Use portable abicheck.sh from xfconf.
 - Add missing linker flag.
 - Add Greek manual screenshots.
@@ -536,7 +536,7 @@ and should meet the needs for any Expidus application development.
 
 0.6.0
 =====
-- Add main category to exo-open desktop files.
+- Add main category to endo-open desktop files.
 - Translation updates: Greek, Croatian, Polish, Turkish, Romanian,
   French, Arabic.
 
@@ -554,10 +554,10 @@ and should meet the needs for any Expidus application development.
 - Fix two @libexecdir@ -> @HELPERDIR@ replacements.
 - Add Icedove helper.
 - Fix Opera helper with Opera >= 10.60.
-- Add mime types to the exo-open desktop files (bug #6800).
+- Add mime types to the endo-open desktop files (bug #6800).
 - Store preferred application in mimeapps.list (bug #6800).
 - Don't build the GIO module after glib 2.27 (bug #6800).
-- Make exo-open more standalone (bug #6573).
+- Make endo-open more standalone (bug #6573).
 - Translation updates (ug, gl, zh_TW, ru, sk, ja, el, sv, es, eu,
   hu, pt, kk, it, ja, he, uk, ca, da, id).
 
@@ -570,10 +570,10 @@ and should meet the needs for any Expidus application development.
 
 0.5.3
 =====
-- Drop all HAL related code. Exo-hal is not used by thunar-volman
+- Drop all HAL related code. Endo-hal is not used by thunar-volman
   anymore now it is ported to udev, udisks is a non-hal replacement
-  for exo-mount.
-- Add working directory support to exo-desktop-item-edit (bug #5692).
+  for endo-mount.
+- Add working directory support to endo-desktop-item-edit (bug #5692).
 - Generate documentation with --enable-gen-doc.
 - Make the treeview work again with gtk 2.20 (bug #6230).
 - Fix compilation error (bug #6421).
@@ -584,48 +584,48 @@ and should meet the needs for any Expidus application development.
 0.5.2
 =====
 - Some fixes in the python bindings (bug #6186, #6187 and #6188).
-- Increase exo module priority.
-- Add support for editing .directory files in exo-desktop-item-edit.
+- Increase endo module priority.
+- Add support for editing .directory files in endo-desktop-item-edit.
 - Add filter entry in the icon chooser dialog.
-- Add desktop files for the exo-open types.
+- Add desktop files for the endo-open types.
 - Fix link problem with --no-add-needed (bug #5951).
 - Translation updates (es, kk, ca, it, sv, ru, uk, hu, bn, fi, gl,
   ja, cs, fr, pt, pt_BR, da, eu, lv, sk, zh_CN, fr).
 
 0.5.1
 =====
-- Remove exo-mount-point API.
+- Remove endo-mount-point API.
 - Only add sync mount option to devices with no volume.
 - Add missing function in the symbols file.
-- Use the GIO code for reading mount points in exo-mount.
+- Use the GIO code for reading mount points in endo-mount.
 - Make GIO-Unix an optional dependency.
 - Use .desktop filename when creating a new desktop item with
-  exo-desktop-item-edit.
+  endo-desktop-item-edit.
 
 0.5.0
 =====
-The API version of exo has been changed from 0.3 to 1, to make it easier
+The API version of endo has been changed from 0.3 to 1, to make it easier
 to bump minor and major version numbers in future releases. To compile
-against this version of exo, you have to change exo-0.3 to exo-1 in your
+against this version of endo, you have to change endo-0.3 to endo-1 in your
 configure file. This backwards-incompatible change has also been used to
 remove deprecated APIs or APIs that are now provided by Gtk 2.14 or Glib
 2.18.
 
 Removed or incompatibly changed classes/enums/functions:
-  - Renamed exo_url_about_dialog_hook() to exo_gtk_url_about_dialog_hook().
-  - Exo(Mutual)Binding structures are now private.
-  - Removed exo_icon_view_{set,get}_{text,markup,pixbuf}_column().
-  - Removed ExoPangoEllipsizeMode and related functions.
-  - Removed exo_md5_*() functions and ExoMd5Digest.
-  - Removed exo_intern_string() and exo_intern_static_string().
-  - Removed ExoEllipsizedLabel has been entirely removed.
-  - Removed exo_gtk_object_ref_sink() and
-    exo_gtk_radio_action_set_current_value().
-  - Removed exo_url_show() and exo_url_show_on_screen().
+  - Renamed endo_url_about_dialog_hook() to endo_gtk_url_about_dialog_hook().
+  - Endo(Mutual)Binding structures are now private.
+  - Removed endo_icon_view_{set,get}_{text,markup,pixbuf}_column().
+  - Removed EndoPangoEllipsizeMode and related functions.
+  - Removed endo_md5_*() functions and EndoMd5Digest.
+  - Removed endo_intern_string() and endo_intern_static_string().
+  - Removed EndoEllipsizedLabel has been entirely removed.
+  - Removed endo_gtk_object_ref_sink() and
+    endo_gtk_radio_action_set_current_value().
+  - Removed endo_url_show() and endo_url_show_on_screen().
 
 New classes/functions:
-  - ExoJob and ExoSimpleJob for handling threaded/asynchronous jobs.
-  - exo_str_is_empty(), exo_str_looks_like_an_uri().
+  - EndoJob and EndoSimpleJob for handling threaded/asynchronous jobs.
+  - endo_str_is_empty(), endo_str_looks_like_an_uri().
 
 Other changes:
 - GIO module for handling URIs that are known by the preferred
@@ -646,8 +646,8 @@ Other changes:
 0.3.103
 =======
 - Use the update-preview signal for updating the preview (bug #5133)
-- Add support for iocharset in exo-mount (bug #4294).
-- Make mounting NTFS drives work in exo-mount (bug #4532).
+- Add support for iocharset in endo-mount (bug #4294).
+- Make mounting NTFS drives work in endo-mount (bug #4532).
 - Open trash:// uris with the file manager (bug #5777).
 - Fix some small compiler warnings.
 - Switch the build files to use GIT.
@@ -656,10 +656,10 @@ Other changes:
 0.3.102
 =======
 - Allow all arguments in the terminal parameters (part of bug #5301).
-- Fix some issues in exo-open with spaces in arguments.
+- Fix some issues in endo-open with spaces in arguments.
 - Properly handle NULL pixbufs in the toolbars code.
-- Make sure the ui-manager is up2date when creating the exo toolbar.
-- Fix possible segfault in exo_icon_view_get_item_at_pos (bug #5633).
+- Make sure the ui-manager is up2date when creating the endo toolbar.
+- Fix possible segfault in endo_icon_view_get_item_at_pos (bug #5633).
 - Do not escape commas in urls (bug #5654).
 - Lookup the hardcoded paths for (u)mount during configure (bug #3717).
 - Fix missing include for strftime (bug #3751).
@@ -668,7 +668,7 @@ Other changes:
 
 0.3.101
 =======
-- Quote arguments passed to exo-open (bug #5132).
+- Quote arguments passed to endo-open (bug #5132).
 - Add gettext() call around two strings which are already as translatable with
   N_() (bug #5203).
 - Fix broken build due to incomplete integration of the Danish and Galician
@@ -689,14 +689,14 @@ Other changes:
 
 0.3.93
 ======
-- Don't setup bindings for <Shift>n and <Shift>p in ExoIconView so that
+- Don't setup bindings for <Shift>n and <Shift>p in EndoIconView so that
   type-ahead search works as expected (bug #4633).
 - Remove GenericName and "Expidus 4" prefix from
-  exo-preferred-applications.desktop.
+  endo-preferred-applications.desktop.
 - Stop startup notification once the plug is created and the helper
   settings dialog content has been moved into the plug.
 - Use -V instead of -v as short parameter for --version.
-- Improve handling of URIs in exo-open (bug #4627).
+- Improve handling of URIs in endo-open (bug #4627).
 - Updated translations: ca (Carles Muños Gorriz), cs (Michal Varady),
   de (Fabian Nowak, Jannis Pohlmann), es (Abel Martín), eu (Piarres
   Beobide), fi (Jari Rahkonen), fr (Maximilian Schleiss), hu (Szervác
@@ -737,7 +737,7 @@ Other changes:
 
 0.3.4
 =====
-- Add option to exo-csource to strip comments from XML prior to embedding
+- Add option to endo-csource to strip comments from XML prior to embedding
   them into binaries (Bug #3094).
 - Fix compilation on Solaris 2.8 (Bug #2798).
 - Fix compilation on NetBSD (Bug #2808).
@@ -756,19 +756,19 @@ Other changes:
 
 0.3.2
 =====
-- Further clean up the ExoIconView code and add several small optimization.
-- Import exo-mount utility to drop the dependency on other mount utilities,
+- Further clean up the EndoIconView code and add several small optimization.
+- Import endo-mount utility to drop the dependency on other mount utilities,
   like pmount and gnome-mount, that don't work reliably, and were often the
   cause of trouble when mounting in Thunar.
 - Add optional mount notify tool, which notifies the user that a device/media
   is begin unmounted by the system and gives a hint when the device/media can
   be disconnected/removed.
-- Add exo-hal library, which provides several HAL related utility functions
+- Add endo-hal library, which provides several HAL related utility functions
   that have been deprecated in libhal-storage, but are required by several
   modules.
-- Import ExoMountPoint module, which provides platform independent access to
+- Import EndoMountPoint module, which provides platform independent access to
   the configured and currently active mount points. This is required by other
-  modules like exo-mount and thunar-vfs (for the trash implementation).
+  modules like endo-mount and thunar-vfs (for the trash implementation).
 - Fix crash with certain kinds of discs (Bug #2723).
 - Detect complex mailto:-URIs properly (Bug #2530).
 - Fix compilation on amd64 (Bug #2758).
@@ -783,7 +783,7 @@ Other changes:
 
 0.3.1.12rc2
 ===========
-- Added a --working-directory command line switch to exo-open, which primarily
+- Added a --working-directory command line switch to endo-open, which primarily
   useful to start the TerminalEmulator's in a specific directory.
 - Import french translations of the user manual (#2478).
 - Fix double click somethimes requiring a third click (#2259).
@@ -802,21 +802,21 @@ Other changes:
 
 0.3.1.10rc1
 ===========
-- Added a new ExoIconChooserDialog widget to pick an icon from either the
+- Added a new EndoIconChooserDialog widget to pick an icon from either the
   current icon theme or an image file.
-- Added exo_gtk_file_chooser_add_thumbnail_preview() which adds a thumbnail
+- Added endo_gtk_file_chooser_add_thumbnail_preview() which adds a thumbnail
   preview widget to a GtkFileChooser.
-- Added exo_gdk_pixbuf_new_from_at_max_size() to scale down image files while
+- Added endo_gdk_pixbuf_new_from_at_max_size() to scale down image files while
   loading them, but never scale up.
-- Added ExoCellRendererIcon as default icon renderer for the ExoIconView.
+- Added EndoCellRendererIcon as default icon renderer for the EndoIconView.
 - Added support for the rxvt-unicode terminal emulator (Bug #2158).
-- Updated ExoCellRendererEllipsizedText to be used as default text renderer
-  for the ExoIconView.
-- Updated ExoTreeView to add support for rubberband selection (Bug #1996).
-- Updated exo-desktop-item-edit to offer a completion of possible applications
+- Updated EndoCellRendererEllipsizedText to be used as default text renderer
+  for the EndoIconView.
+- Updated EndoTreeView to add support for rubberband selection (Bug #1996).
+- Updated endo-desktop-item-edit to offer a completion of possible applications
   from the desktop database in the Name entry field when creating or modifying
   launchers.
-- Fix a layout problem in ExoIconView where the appearance of a scrollbar
+- Fix a layout problem in EndoIconView where the appearance of a scrollbar
   causes the icons to be laid out again and again (Bug #2219, Matt McClinch).
 - Fix build with compilers other than gcc (Bug #2252).
 - Use the GSlice allocator where possible to further reduce memory overhead.
@@ -839,24 +839,24 @@ Other changes:
   additional information when composing emails using the preferred mail reader,
   for example, you can use the extended mailto:-syntax to open the composer
   with a predefined subject and automatically attached files.
-- Updated the ExoIconView class to support an API compatible to the GtkIconView
+- Updated the EndoIconView class to support an API compatible to the GtkIconView
   in Gtk+ 2.8, and improve the performance of the icon view.
-- Added single click navigation support to ExoIconView.
-- Added hover-selection support to ExoIconView in single-click mode, which
+- Added single click navigation support to EndoIconView.
+- Added hover-selection support to EndoIconView in single-click mode, which
   automatically selects an item when the mouse is paused over it for a
   certain amount of time.
-- Added "Right Arrow Keyboard Navigation" to ExoIconView, as suggested in
+- Added "Right Arrow Keyboard Navigation" to EndoIconView, as suggested in
   http://chabada.sk/better-desktop/#nautilus-improvements.
-- Added a compact layout mode to ExoIconView, similar to the list view found
+- Added a compact layout mode to EndoIconView, similar to the list view found
   in Windows Explorer.
-- Added a new widget ExoTreeView, which extends GtkTreeView with single click
+- Added a new widget EndoTreeView, which extends GtkTreeView with single click
   navigation.
-- Added a new widget ExoWrapTable, which layouts its child widgets in an
+- Added a new widget EndoWrapTable, which layouts its child widgets in an
   automatically wrapped table. For example, this is used for the emblem
   chooser in Thunar.
-- Added a new utility exo-csource, which can generate C source code from
+- Added a new utility endo-csource, which can generate C source code from
   arbitrary data.
-- Added a new utility exo-desktop-item-edit, which is used to create new
+- Added a new utility endo-desktop-item-edit, which is used to create new
   launchers/links on the desktop and when dropping URLs to the file manager.
 - Added various new convenience functions to make dealing with strings,
   pixbufs and other data structures easier for C programmers.
@@ -881,9 +881,9 @@ Other changes:
 0.3.0
 =====
 - The icon bar is now sized and rendered properly with all Gtk+ theme engines.
-- The following obsolete components have been removed: ExoIce, ExoFileWatch,
-  ExoUri and ExoPropertyProxy.
-- A bug in ExoCellRendererEllipsizedText was fixed, which caused Xfmedia to
+- The following obsolete components have been removed: EndoIce, EndoFileWatch,
+  EndoUri and EndoPropertyProxy.
+- A bug in EndoCellRendererEllipsizedText was fixed, which caused Xfmedia to
   crash under certain circumstances.
 - The dependency on D-BUS is gone.
 - Python bindings have been added.
@@ -895,35 +895,35 @@ Other changes:
 =====
 - The ellipsizing functions now use the Pango 1.6 builtin functionality
   if available.
-- Added lightweight session management support with the ExoXsessionClient
+- Added lightweight session management support with the EndoXsessionClient
   class.
-- The API of ExoEllipsizedLabel was changed to be compatible with GtkLabel
+- The API of EndoEllipsizedLabel was changed to be compatible with GtkLabel
   in Gtk+ 2.5 and above.
-- Added an ellipsizing cell renderer ExoCellRendererEllipsizedText, compatible
+- Added an ellipsizing cell renderer EndoCellRendererEllipsizedText, compatible
   with GtkCellRendererText in Gtk+ 2.6.
-- ExoIconBar has an "orientation" property now. The "selection-changed" signal
-  has been renamed to "changed". The ExoIconBar background is updated when
+- EndoIconBar has an "orientation" property now. The "selection-changed" signal
+  has been renamed to "changed". The EndoIconBar background is updated when
   the Gtk style changes.
-- libexo is fully internationalized now. German translations are already
+- libendo is fully internationalized now. German translations are already
   available.
-- The ExoToolbarsView class has been changed to provide a "Customize
+- The EndoToolbarsView class has been changed to provide a "Customize
   Toolbars..." menu item together with the other items and to emit a
   signal "customize".
-- ExoPropertyProxy has been replaced by ExoBinding, which is based on
+- EndoPropertyProxy has been replaced by EndoBinding, which is based on
   the GObject Binding Properties implementation available from
-  http://ex-code.com/glib-bind/. ExoBinding is way more powerful and
-  easier to handle than ExoPropertyProxy. ExoBinding contains some
+  http://ex-code.com/glib-bind/. EndoBinding is way more powerful and
+  easier to handle than EndoPropertyProxy. EndoBinding contains some
   improvements over GBinding; for example, GBinding can run into an
   endless loop, when you bind properties of type GBoxed, whereas
-  ExoBinding doesn't suffer from this problem.
+  EndoBinding doesn't suffer from this problem.
 - The MD5 functions have been changed to be compatible with the MD5 API
   found in libegg.
 - The API documentation is nearly complete now.
 
 0.1.3
 =====
-- Added a framework for editable toolbars (ExoToolbarsModel, ExoToolbarsView,
-  ExoToolbarsEditor and ExoToolbarsEditorDialog).
+- Added a framework for editable toolbars (EndoToolbarsModel, EndoToolbarsView,
+  EndoToolbarsEditor and EndoToolbarsEditorDialog).
 - Added initial API reference documentation.
 - Added version information variables and macros similar to whats used
   in Expidus and Gtk+.
@@ -932,7 +932,7 @@ Other changes:
 0.1.2
 =====
 - Fixed a style problem with the iconbar.
-- Fixed a bug in the md5 module, that caused the libexo compile to fail
+- Fixed a bug in the md5 module, that caused the libendo compile to fail
   on some GNU/Linux systems.
 - The configure option --enable-final now enables linker optimizations for
   plattforms that support it (recent GNU binutils required).
@@ -942,6 +942,6 @@ Other changes:
 =====
 - An ICE module was added, based upon the ice-layer from expidus1-session and
   the gnome-ice module of libgnomeui.
-- libexo no longer requires SSL on non-BSD systems, since a MD5 fallback
+- libendo no longer requires SSL on non-BSD systems, since a MD5 fallback
   implementation was added, which will be used if the system doesn't
   provide MD5_* functions.

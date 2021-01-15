@@ -6,5 +6,5 @@ Sean Davis <bluesabre@expidus.org>
 Parts of this library are based on code from libegg, Gtk+, the GNOME project
 and the ROX Filer.
 
-The exo-binding module is based on the GObject Binding Properties library
+The endo-binding module is based on the GObject Binding Properties library
 written by Victor Porton <porton@ex-code.com>.

@@ -1,9 +1,9 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS =								\
-	exo								\
-	exo-desktop-item-edit						\
-	exo-open							\
+	endo								\
+	endo-desktop-item-edit						\
+	endo-open							\
 	docs								\
 	icons								\
 	pixmaps								\

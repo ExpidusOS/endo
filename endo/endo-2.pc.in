@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+endo_api_version=@LIBENDO_VERSION_API@
+
+Name: @PACKAGE_TARNAME@
+Description: Extension library for Expidus
+Requires: gtk+-3.0 libexpidus1util-1.0
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lendo-${endo_api_version}
+Cflags: -I${includedir}/endo-${endo_api_version}

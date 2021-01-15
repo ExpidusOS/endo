@@ -1,0 +1,112 @@
+/*-
+ * Copyright (c) 2004-2006 os-cillation e.K.
+ *
+ * Written by Benedikt Meurer <benny@expidus.org>.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301 USA
+ */
+
+#if !defined (ENDO_INSIDE_ENDO_H) && !defined (ENDO_COMPILATION)
+#error "Only <endo/endo.h> can be included directly, this file may disappear or change contents."
+#endif
+
+#ifndef __ENDO_CONFIG_H__
+#define __ENDO_CONFIG_H__
+
+#include <glib-object.h>
+
+G_BEGIN_DECLS
+
+/**
+ * ENDO_MAJOR_VERSION:
+ *
+ * Like #endo_major_version, but from the headers used at application
+ * compile time, rather than from the library linked against at
+ * application run time.
+ **/
+#define ENDO_MAJOR_VERSION @LIBENDO_VERSION_MAJOR@
+
+/**
+ * ENDO_MINOR_VERSION:
+ *
+ * Like #endo_minor_version, but from the headers used at application
+ * compile time, rather than from the library linked against at
+ * application run time.
+ **/
+#define ENDO_MINOR_VERSION @LIBENDO_VERSION_MINOR@
+
+/**
+ * ENDO_MICRO_VERSION:
+ *
+ * Like #endo_micro_version, but from the headers used at application
+ * compile time, rather than from the library linked against at
+ * application run time.
+ **/
+#define ENDO_MICRO_VERSION @LIBENDO_VERSION_MICRO@
+
+/**
+ * ENDO_CHECK_VERSION:
+ * @major: major version (e.g. 1 for version 1.2.3)
+ * @minor: minor version (e.g. 2 for version 1.2.3)
+ * @micro: micro version (e.g. 3 for version 1.2.3)
+ *
+ * Checks the endo version.
+ *
+ * Returns: %TRUE if the version of the endo header files is equal or
+ *          better than the passed-in version.
+ **/
+#define ENDO_CHECK_VERSION(major, minor, micro) \
+  (ENDO_MAJOR_VERSION > (major) \
+   || (ENDO_MAJOR_VERSION == (major) \
+       && ENDO_MINOR_VERSION > (minor)) \
+   || (ENDO_MAJOR_VERSION == (major) \
+       && ENDO_MINOR_VERSION == (minor) \
+       && ENDO_MICRO_VERSION >= (micro)))
+
+extern const guint endo_major_version;
+extern const guint endo_minor_version;
+extern const guint endo_micro_version;
+
+const gchar *endo_check_version (guint required_major,
+                                guint required_minor,
+                                guint required_micro);
+
+/* verify that G_GNUC_NULL_TERMINATED is defined */
+#if !defined(G_GNUC_NULL_TERMINATED)
+#if __GNUC__ >= 4
+#define G_GNUC_NULL_TERMINATED __attribute__((__sentinel__))
+#else
+#define G_GNUC_NULL_TERMINATED
+#endif /* __GNUC__ */
+#endif /* !defined(G_GNUC_NULL_TERMINATED) */
+
+/* verify that G_GNUC_WARN_UNUSED_RESULT is defined */
+#if !defined(G_GNUC_WARN_UNUSED_RESULT)
+#if __GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 4)
+#define G_GNUC_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+#else
+#define G_GNUC_WARN_UNUSED_RESULT
+#endif /* __GNUC__ */
+#endif /* !defined(G_GNUC_WARN_UNUSED_RESULT) */
+
+/* shorter macros for the GParamSpecs with static strings */
+#define ENDO_PARAM_READABLE  (G_PARAM_READABLE | G_PARAM_STATIC_STRINGS)
+#define ENDO_PARAM_WRITABLE  (G_PARAM_WRITABLE | G_PARAM_STATIC_STRINGS)
+#define ENDO_PARAM_READWRITE (G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS)
+
+G_END_DECLS
+
+#endif /* !__ENDO_CONFIG_H__ */
